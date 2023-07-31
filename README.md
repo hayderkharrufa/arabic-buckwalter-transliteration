@@ -31,7 +31,7 @@ python -m unittest tests/test_transliteration.py
 ```
 
 ## Contributing
-We appreciate all the help we can get. If you want to contribute to this project, please read our CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+We appreciate all the help we can get. If you want to contribute to this project, please read our [CONTRIBUTING.md](https://github.com/hayderkharrufa/arabic-buckwalter-transliteration/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-License
-This project is licensed under the terms of the MIT license. See the LICENSE file for the full text.
+## License
+This project is licensed under the terms of the MIT license. See the [LICENSE](https://github.com/hayderkharrufa/arabic-buckwalter-transliteration/blob/main/LICENSE file for the full text.
