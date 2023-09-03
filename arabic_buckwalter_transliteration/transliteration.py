@@ -1,104 +1,36 @@
 def buckwalter_to_arabic(buckwalter):
     # Buckwalter to Arabic character map
-    b2a = {
-        "'": '\u0621', # Hamza
-        "|": '\u0622', # Maddah
-        ">": '\u0623', # Alef with Hamza above
-        "&": '\u0624', # Waw with Hamza above
-        "<": '\u0625', # Alef with Hamza below
-        "}": '\u0626', # Yeh with Hamza above
-        "A": '\u0627', # Alef
-        "b": '\u0628', # Beh
-        "p": '\u0629', # Teh Marbuta
-        "t": '\u062A', # Teh
-        "^": '\u062B', # Theh
-        "j": '\u062C', # Jeem
-        "H": '\u062D', # Hah
-        "x": '\u062E', # Khah
-        "d": '\u062F', # Dal
-        "*": '\u0630', # Thal
-        "r": '\u0631', # Reh
-        "z": '\u0632', # Zain
-        "s": '\u0633', # Seen
-        "$": '\u0634', # Sheen
-        "S": '\u0635', # Sad
-        "D": '\u0636', # Dad
-        "T": '\u0637', # Tah
-        "Z": '\u0638', # Zah
-        "E": '\u0639', # Ain
-        "g": '\u063A', # Ghain
-        "_": '\u0640', # Tatweel
-        "f": '\u0641', # Feh
-        "q": '\u0642', # Qaf
-        "k": '\u0643', # Kaf
-        "l": '\u0644', # Lam
-        "m": '\u0645', # Meem
-        "n": '\u0646', # Noon
-        "h": '\u0647', # Heh
-        "w": '\u0648', # Waw
-        "Y": '\u0649', # Alef Maksura
-        "y": '\u064A',  # Yeh
-        "F": '\u064B', # Fathatan
-        "N": '\u064C', # Dammatan
-        "K": '\u064D', # Kasratan
-        "a": '\u064E', # Fatha
-        "u": '\u064F', # Damma
-        "i": '\u0650', # Kasra
-        "~": '\u0651', # Shadda
-        "o": '\u0652', # Sukun
-    }
+    b2a = {  # mapping from Buckwalter to Arabic script
+    u'b': u'\u0628', u'*': u'\u0630', u'T': u'\u0637', u'm': u'\u0645',
+    u't': u'\u062a', u'r': u'\u0631', u'Z': u'\u0638', u'n': u'\u0646',
+    u'^': u'\u062b', u'z': u'\u0632', u'E': u'\u0639', u'h': u'\u0647',
+    u'j': u'\u062c', u's': u'\u0633', u'g': u'\u063a', u'H': u'\u062d',
+    u'q': u'\u0642', u'f': u'\u0641', u'x': u'\u062e', u'S': u'\u0635',
+    u'$': u'\u0634', u'd': u'\u062f', u'D': u'\u0636', u'k': u'\u0643',
+    u'>': u'\u0623', u'\'': u'\u0621', u'}': u'\u0626', u'&': u'\u0624',
+    u'<': u'\u0625', u'|': u'\u0622', u'A': u'\u0627', u'Y': u'\u0649',
+    u'p': u'\u0629', u'y': u'\u064a', u'l': u'\u0644', u'w': u'\u0648',
+    u'F': u'\u064b', u'N': u'\u064c', u'K': u'\u064d', u'a': u'\u064e',
+    u'u': u'\u064f', u'i': u'\u0650', u'~': u'\u0651', u'o': u'\u0652'
+}
 
     return ''.join(b2a.get(char, char) for char in buckwalter)
 
 
 def arabic_to_buckwalter(arabic):
     # Arabic to Buckwalter character map
-    a2b = {
-        '\u0621': "'", # Hamza
-        '\u0622': "|", # Maddah
-        '\u0623': ">", # Alef with Hamza above
-        '\u0624': "&", # Waw with Hamza above
-        '\u0625': "<", # Alef with Hamza below
-        '\u0626': "}", # Yeh with Hamza above
-        '\u0627': "A", # Alef
-        '\u0628': "b", # Beh
-        '\u0629': "p", # Teh Marbuta
-        '\u062A': "t", # Teh
-        '\u062B': "^", # Theh
-        '\u062C': "j", # Jeem
-        '\u062D': "H", # Hah
-        '\u062E': "x", # Khah
-        '\u062F': "d", # Dal
-        '\u0630': "*", # Thal
-        '\u0631': "r", # Reh
-        '\u0632': "z", # Zain
-        '\u0633': "s", # Seen
-        '\u0634': "$", # Sheen
-        '\u0635': "S", # Sad
-        '\u0636': "D", # Dad
-        '\u0637': "T", # Tah
-        '\u0638': "Z", # Zah
-        '\u0639': "E", # Ain
-        '\u063A': "g", # Ghain
-        '\u0640': "_", # Tatweel
-        '\u0641': "f", # Feh
-        '\u0642': "q", # Qaf
-        '\u0643': "k", # Kaf
-        '\u0644': "l", # Lam
-        '\u0645': "m", # Meem
-        '\u0646': "n", # Noon
-        '\u0647': "h", # Heh
-        '\u0648': "w", # Waw
-        '\u0649': "Y", # Alef Maksura
-        '\u064A': "y",  # Yeh
-        '\u064B': "F", # Fathatan
-        '\u064C': "N", # Dammatan
-        '\u064D': "K", # Kasratan
-        '\u064E': "a", # Fatha
-        '\u064F': "u", # Damma
-        '\u0650': "i", # Kasra
-        '\u0651': "~", # Shadda
-        '\u0652': "o", # Sukun
-    }
+    a2b = {  # mapping from Arabic script to Buckwalter
+    u'\u0628': u'b', u'\u0630': u'*', u'\u0637': u'T', u'\u0645': u'm',
+    u'\u062a': u't', u'\u0631': u'r', u'\u0638': u'Z', u'\u0646': u'n',
+    u'\u062b': u'^', u'\u0632': u'z', u'\u0639': u'E', u'\u0647': u'h',
+    u'\u062c': u'j', u'\u0633': u's', u'\u063a': u'g', u'\u062d': u'H',
+    u'\u0642': u'q', u'\u0641': u'f', u'\u062e': u'x', u'\u0635': u'S',
+    u'\u0634': u'$', u'\u062f': u'd', u'\u0636': u'D', u'\u0643': u'k',
+    u'\u0623': u'>', u'\u0621': u'\'', u'\u0626': u'}', u'\u0624': u'&',
+    u'\u0625': u'<', u'\u0622': u'|', u'\u0627': u'A', u'\u0649': u'Y',
+    u'\u0629': u'p', u'\u064a': u'y', u'\u0644': u'l', u'\u0648': u'w',
+    u'\u064b': u'F', u'\u064c': u'N', u'\u064d': u'K', u'\u064e': u'a',
+    u'\u064f': u'u', u'\u0650': u'i', u'\u0651': u'~', u'\u0652': u'o'
+}
 
     return ''.join(a2b.get(char, char) for char in arabic)

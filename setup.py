@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='arabic_buckwalter_transliteration',
-    version='0.1.0',    # your package version
+    version='1.0.0',
     description='A Python package to convert Arabic text to Buckwalter transliteration and vice versa',
-    author='Your Name',    # your name
-    author_email='your.email@example.com',    # your email
+    author='Hayder Kharrufa',
+    author_email='',
     packages=find_packages(),
     install_requires=[],  # any libraries that your module depends on
     classifiers=[
