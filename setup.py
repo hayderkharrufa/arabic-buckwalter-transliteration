@@ -7,7 +7,7 @@ setup(
     author='Hayder Kharrufa',
     author_email='',
     packages=find_packages(),
-    install_requires=[],  # any libraries that your module depends on
+    install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
