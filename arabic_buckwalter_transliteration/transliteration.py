@@ -13,7 +13,7 @@ def buckwalter_to_arabic(buckwalter):
     u'F': u'\u064b', u'N': u'\u064c', u'K': u'\u064d', u'a': u'\u064e',
     u'u': u'\u064f', u'i': u'\u0650', u'~': u'\u0651', u'o': u'\u0652',
     u'C': u'\u0686', u'G': u'\u06AF', u'P': u'\u067E', u'ı': u'\u0640',
-    u'V': u'\u06A4'
+    u'V': u'\u06A4', u'L': u'\u06B5', u'O': u'\u06C6', u'e': u'\u06CE'
 }
 
     return ''.join(b2a.get(char, char) for char in buckwalter)
@@ -34,7 +34,7 @@ def arabic_to_buckwalter(arabic):
     u'\u064b': u'F', u'\u064c': u'N', u'\u064d': u'K', u'\u064e': u'a',
     u'\u064f': u'u', u'\u0650': u'i', u'\u0651': u'~', u'\u0652': u'o',
     u'\u0686': u'C', u'\u06AF': u'G', u'\u067E': u'P', u'\u0640': u'ı',
-    u'\u06A4': u'V'
+    u'\u06A4': u'V', u'\u06B5': u'L', u'\u06C6': u'O', u'\u06CE': u'e'
 }
 
     return ''.join(a2b.get(char, char) for char in arabic)

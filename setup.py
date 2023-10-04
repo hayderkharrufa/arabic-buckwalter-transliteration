@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='arabic_buckwalter_transliteration',
-    version='1.0.4',
+    version='1.0.5',
     description='A Python package to convert Arabic text to Buckwalter transliteration and vice versa',
     author='Hayder Kharrufa',
     author_email='',
